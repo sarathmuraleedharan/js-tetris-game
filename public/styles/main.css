@@ -1,0 +1,9 @@
+body {
+    position: relative;
+}
+
+#canvas {
+    position: absolute;
+    left: calc(50vw - 200px);
+    top: 20px;
+}

@@ -1,7 +1,7 @@
 class Canvas {
     constructor() {
-        this.width = 600;
-        this.height = 500;
+        this.width = 400;
+        this.height = 550;
 
         this.canvas = document.getElementById('canvas');
         this.canvas.width = this.width;
@@ -20,14 +20,13 @@ class Canvas {
 
     draw() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
         this.drawRectagle();
         
     }
 
     drawRectagle(){
         this.context.strokeSytle='red';
-        this.context.rect(100,100,100,100);
+        this.context.rect(0,0,this.width,this.height);
         this.context.stroke();
     }
 
