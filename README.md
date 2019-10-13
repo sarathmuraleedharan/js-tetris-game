@@ -1,4 +1,4 @@
-# js-canvas-template
+# js-tetris-game
 
 Run following commands to start runnig the project
 
