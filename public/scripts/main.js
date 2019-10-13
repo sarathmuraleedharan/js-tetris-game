@@ -1,12 +1,17 @@
+import Game from "./tetris/Game.js";
+
 class Canvas {
     constructor() {
         this.width = 400;
-        this.height = 550;
+        this.height = 500;
 
         this.canvas = document.getElementById('canvas');
         this.canvas.width = this.width;
         this.canvas.height = this.height;
         this.context = this.canvas.getContext('2d');
+
+
+        this.game = new Game(this.width,this.height);
     }
 
     update = (deltaTime) => {
@@ -19,9 +24,10 @@ class Canvas {
     }
 
     draw() {
+        this.context.beginPath();
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.drawRectagle();
-        
+        this.drawRectagle(); 
+        this.game.draw(this.context);       
     }
 
     drawRectagle(){
